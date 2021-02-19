@@ -1,6 +1,6 @@
 This Power Automate has its sole purpose to block inactive Azure AD users (users that didn't log-in for last 90 days) – please note that users synced from AD to Azure AD will not be blocked using this flow. For those users we need to use Azure automation and PowerShell. Also this Power Automate will block only Members and not Guests in your environment. 
 
-You will need Power Automate Premium license - if you don't have one you can buy it, start free trila, or to use flow that is only detecting inactive users.
+You will need Power Automate Premium license - if you don't have one you can buy it, start free trila, or to use flow that is only detecting inactive users - here is the link.
 
 First, we need to register app in Azure AD so that we can use REST API in Power Automate and to have needed permissions. Go to Azure AD portal (**aad.portal.azure.com**), click on **Azure Active Directory > App registrations > +New registration**. Enter the name and click on **Register**.
 
@@ -17,7 +17,7 @@ As a next step, click on **Certificates & secrets > +New client secret**. Enter 
 Click on **Overview** and copy **Application (client) ID** and **Directory (tenant) ID**.
 We will need Secret, Application ID, and Tenant ID for our Power Automate.
 
-Download template from this site (DetectAndIsolateInactiveAzureADUser.zip).
+Download template from this site (DetectAndIsolateInactiveAzureADUser.zip). 
 Now, we go to Power Platform portal (flow.microsoft.com). Choose **My flows** and then click on **Import**. Click on **Upload** and choose a template where you had download it and click on Open. In **Related resources**, click on **Select during import** and click on **+Create new** if you don’t have connection already created. If you have just choose already available connection. If you click on create new, you’ll be redirected to new site where we will be creating new connections needed. 	
 
 Click on **+New connection**, find **Azure AD** (search on right side) and click on **+ (Create) ** sign on right side in line with Azure AD. Click on **Create** and login as your admin user. Repeat steps for Office 365 Outlook** and **Microsoft Teams**. 
