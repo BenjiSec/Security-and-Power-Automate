@@ -15,7 +15,7 @@ As a next step, click on **Certificates & secrets > +New client secret**. Enter 
 Click on **Overview** and copy **Application (client) ID** and **Directory (tenant) ID**.
 We will need Secret, Application ID, and Tenant ID for our Power Automate.
 
-Download template from this site (DetectInactiveAzureADUser.zip).
+Download template from this site (DetectInactiveAzureADUser.zip). - https://github.com/BenjiSec/Security-and-Power-Automate/blob/main/Detect-Inactive-AzureAD-User/DetectInactiveAzureADUser.zip
 
 Now, we go to Power Platform portal (flow.microsoft.com). Choose **My flows** and then click on **Import**. Click on **Upload** and choose a template where you had download it and click on Open. In **Related resources**, click on **Select during import** and click on **+Create new** if you don’t have connection already created. If you have just choose already available connection. If you click on create new, you’ll be redirected to new site where we will be creating new connections needed.  
 
@@ -41,4 +41,4 @@ If you want to detect users that didn't log-in for 30 days or any other number o
 
 This Power Automate will detect Members and Guests. If you want to detect only Guest or only Members then you need to add condition in **Condition** step - **userType > is equal to > Member**. For Guests change Member with **Guest**. 
 
-If you want to block users, you can do it manually (instructions are added in email notification) or to use Detect and Block Inactive Azure AD User flow - 
+If you want to block users, you can do it manually (instructions are added in email notification) or to use Detect and Block Inactive Azure AD User flow - https://github.com/BenjiSec/Security-and-Power-Automate/tree/main/Detect-And-Isolate-Inactive-AzureAD-User
