@@ -1,6 +1,8 @@
 This Power Automate has its sole purpose to block inactive Azure AD users (users that didn't log-in for last 90 days) – please note that users synced from AD to Azure AD will not be blocked using this flow. For those users we need to use Azure automation and PowerShell. Also this Power Automate will block only Members and not Guests in your environment. 
 
-You will need Power Automate Premium license - if you don't have one you can buy it, start free trila, or to use flow that is only detecting inactive users - https://github.com/BenjiSec/Security-and-Power-Automate/tree/main/Detect-Inactive-AzureAD-User.
+**Important note is that if you have inactive admin user, that user will not be blocked, and you will be getting Failed status (users that are not admins will be blocked).** But if you have inactive admin user for 90 days, failed Power Automate is least of your problems. Check your failed status and on which users it failed, and you can go to Azure AD admin portal and manually block user.
+
+You will need Power Automate Premium license - if you don't have one you can buy it, start free trial, or to use flow that is only detecting inactive users - https://github.com/BenjiSec/Security-and-Power-Automate/tree/main/Detect-Inactive-AzureAD-User.
 
 First, we need to register app in Azure AD so that we can use REST API in Power Automate and to have needed permissions. Go to Azure AD portal (**aad.portal.azure.com**), click on **Azure Active Directory > App registrations > +New registration**. Enter the name and click on **Register**.
 
